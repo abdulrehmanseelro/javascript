@@ -1,4 +1,4 @@
-//          javascript
+        //  javascript
 //  two types of js 
 //  1)vanilla = old (var)
 //  2)ES6(ECMA Script 6) = new (let , const) 
@@ -16,3 +16,22 @@ document.write(x);
 const a = ("hi everyone");
 document.write(a);
 console.log("hello world!");
+// Data types in javascript
+// String
+let city = "karachi";
+console.log(city);
+// Number
+let age = 18;
+console.log(age);
+// Boolean
+let isStudent = true;
+console.log(isStudent);
+// bigint
+let bigNumber = 12345678901234567890n;
+console.log(bigNumber);
+// null
+let emptyValue = null;
+console.log(emptyValue);
+// undefined
+let notDefined;
+console.log(notDefined);
