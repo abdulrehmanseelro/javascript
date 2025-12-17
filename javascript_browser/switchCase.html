@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Switch Case - Day Finder</h2>
+    <p>Enter a number between (1-7)</p>
+    <input type="number" id="day">
+    <button onclick="find()">check</button>
+    <h3>Result:</h3>
+    <div id="result"></div>
+    <script>
+        function find(){
+            let d=Number(document.getElementById("day").value)
+            let text=""
+
+            switch (d){
+                case 1:
+                    text="Sunday"
+                    break
+                case 2:
+                    text="Monday"
+                    break
+                case 3:
+                    text="Tuesday"
+                    break
+                case 4:
+                    text="Wednesday"
+                    break
+                case 5:
+                    text="Thursday"
+                    break
+                case 6:
+                    text="Friday"
+                    break
+                case 7:
+                    text="Saturday"
+                    break
+                default:
+                    text="Invalid! Please enter a number between 1 and 7."
+            }
+
+            document.getElementById("result").innerHTML=text
+        }
+    </script>
+</body>
+</html>

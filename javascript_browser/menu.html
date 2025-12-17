@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+        h1, ol {
+            text-align: center;
+            padding: 10px;
+            background: beige;
+            border: black solid 1px;
+            border-radius: 20px;
+            margin-left: 40%;
+            margin-right: 40%;
+        }
+        ol li {
+            text-align: center;
+            margin-left: 40%;
+            margin-right: 40%;
+
+        }
+        .input {
+            margin: auto;
+            padding: 10px;
+            background: beige;
+            border: black solid 1px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        /* button {
+            width: 100%;
+            background-color: beige;
+            border-radius: 20px;
+            padding: 10px;
+            color: black;
+            font-weight: bolder;
+            font-size: 20px;
+        } */
+        #result {
+            text-align: center;
+            width: 100%;
+            background-color: beige;
+            border-radius: 20px;
+            padding: 10px;
+            color: black;
+            font-weight: bolder;
+            font-size: 20px;    
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Menu:</h1>
+    <ol>
+        <li>Fish<br>450</li>
+        <li>Beef 680</li>
+        <li>Chicken 340</li>
+        <li>Mutton 800</li>
+        <li>Veg<br>250</li>
+    </ol>
+    <div class="input">
+            <input type="number" id="num">
+            <button onclick="menu()">order</button>
+    </div>
+            <div id="result"></div>
+    <script>
+        function menu(){
+            let n=Number(document.getElementById("num").value)
+            let text=""
+
+            switch (n){
+                case 1:
+                    text="Your have ordered fish! Your total bill is 450"
+                    break
+                case 2:
+                    text="Your have ordered beef! Your total bill is 680"
+                    break
+                case 3:
+                    text="Your have ordered chicken! Your total bill is 340"
+                    break
+                case 4:
+                    text="Your have ordered mutton! Your total bill is 800"
+                    break
+                case 5:
+                    text="Your have ordered veg! Your total bill is 250"
+                    break
+                default:
+                    text="Sorry! the thing you ordered in not avaiable right now."
+            }
+            document.getElementById("result").innerHTML=text
+        }
+    </script>
+</body>
+</html>

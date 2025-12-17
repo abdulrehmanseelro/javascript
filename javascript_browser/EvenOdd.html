@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Even Odd JS Funtionality</title>
+</head>
+<body>
+    <h2>Checking Even Odd JavaScript Functionality</h2>
+    <p>Enter Number:</p>
+    <input type="number" id="num">
+    <button onclick="checkEvenOdd()">Check</button>
+    <h3>Result</h3>
+    <div id="result"></div>
+    <script>
+        function checkEvenOdd(){
+            let n=document.getElementById("num").value
+            let num=Number(n)
+            if (isNaN(num)){
+                document.getElemntById("result").innerHTML="Invalid"
+            } else{
+                if(num%2===0){
+                    document.getElementById("result").innerHTML="Even"
+                } else{
+                    document.getElementById("result").innerHTML="Odd"
+                }
+            }
+        }
+    </script>
+</body>
+</html>
