@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="btn">click me!</button>
+    <button class="btn">button 1</button>
+    <button class="btn">button 2</button>
+    <button class="btn">button 3</button>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero quae ab minus nam magni impedit, maxime amet deleniti animi nemo aut, natus quod ex possimus, facere voluptate perferendis doloribus sequi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo enim at neque, aspernatur, ipsam veniam dicta ullam, quod doloribus amet iusto! Vitae, esse accusamus accusantium qui enim corporis explicabo totam.</p> -->
+
+
+    <form>
+        <label>Age: </label>
+        <input type="text" id="age">
+        <button type="button" onclick="verify()">Verify Age!</button>
+    </form>
+    <hr>
+    <div id="sts"></div>
+    <hr>
+
+    <script>
+        // let myBtn=document.getElementById("btn")
+        // console.log(myBtn);
+        // let paragraph=document.getElementsByTagName("p")
+        // console.log(paragraph);
+        // let btnClass=document.getElementsByClassName("btn")
+        // console.log(btnClass);
+        // let querySelector=document.querySelectorAll(".btn")
+        // console.log(querySelector);
+        // let changeBtn=document.getElementById("btn")
+        // btn.innerText="Checkout"
+        // let paraChange=document.querySelectorAll("p")
+        // paraChange[0].innerText="Hello this is short paragraph"
+        function verify(){
+            let myAge=document.getElementById("age")
+            if (myAge.value>=18){
+                document.getElementById("sts").innerText="You are eligible"
+            } else{
+                document.getElementById("sts").innerText="You are not eligible"
+            }
+        }
+    </script>
+</body>
+</html>

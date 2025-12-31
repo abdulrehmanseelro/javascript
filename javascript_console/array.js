@@ -14,3 +14,15 @@
 // ● Messages in chat applications.
 // ● Image galleries.
 // ● To-do applications.
+
+let attendanceList = ["seelro" , "rehman" , "abdul"];
+console.log(attendanceList);
+
+let a = [10 , 11 , 12]
+let b = a.map(c => c*1.1)
+console.log(b);
+
+let d = a.map(e => + (e*1.1).toFixed(2))
+console.log(d);
+let f = a.map(g => (g*1.1).toFixed(6))
+console.log(f);
