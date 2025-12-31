@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #percentageForm {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            background-color: bisque;
+            padding: 100px;
+            border: 10px solid rgb(29, 143, 196);
+        }
+        button, input[type="submit"] {
+          margin-top: 10px;
+          padding: 10px;
+          background-color: rgb(29, 143, 196);
+          color: white;
+          border: none;
+          cursor: pointer;
+        }
+        form input {
+          padding: 5px;
+          margin-top: 5px;
+        }
+        .output {
+            background-color: bisque;
+            border:10px solid rgb(29, 143, 196);
+            padding: 100px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <form id="percentageForm">
+      <label for="">Total Marks </label>
+      <input type="number" id="totalMarks" />
+      <br />
+      <label for="">Obtained Marks </label>
+      <input type="number" id="obtainedMarks" />
+      <br />
+      <br />
+      <input type="submit" value="Calculate Percentage" />
+    </form>
+    <div class="output">
+    <h1 id="percentage">Percentage</h1>
+    <h1 id="grade">Grade</h1>
+    </div>
+    <script>
+        document.getElementById("percentageForm").addEventListener("submit", (event) => {
+        event.preventDefault();
+        let totalMarks = document.getElementById("totalMarks").value;
+        let obtainedMarks = document.getElementById("obtainedMarks").value;
+        let marksPercentage = ((obtainedMarks * 100) / totalMarks);
+        document.getElementById("percentage").innerText = marksPercentage + "%";
+        if (marksPercentage >=80 && marksPercentage <= 100) {
+          document.getElementById("grade").innerHTML = "A1 Grade ";
+        } 
+        else if (marksPercentage >=60 && marksPercentage <= 79) {
+          document.getElementById("grade").innerHTML = "A Grade ";
+        }
+        else if (marksPercentage >=40 && marksPercentage <= 59) {
+          document.getElementById("grade").innerHTML = "B Grade ";
+        }
+        else {
+          document.getElementById("grade").innerText = "FAIL";
+        }
+        });
+    </script>
+</body>
+</html>
